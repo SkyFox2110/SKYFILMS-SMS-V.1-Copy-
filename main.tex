@@ -1,0 +1,263 @@
+\documentclass[12pt,openany]{report}
+
+% ==== Paquetes necesarios ====
+\usepackage{tikz}
+\usepackage{afterpage}
+\usepackage[most]{tcolorbox}
+\usepackage{graphicx}
+\newcounter{pagebeforecert}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,fit, calc}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage{parskip}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-nodecimaldot]{babel}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{letterpaper, top=4.2cm, bottom=2.1cm, left=2.1cm, right=2.1cm, headheight=60pt, headsep=1.5cm}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\onehalfspacing
+
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+  pdftitle={Manual de Seguridad Operacional Skyfilms},
+  pdfauthor={Skyfilms},
+  pdfsubject={RAC 100 - Manual de Seguridad Operacional},
+  pdfcreator={LaTeX},
+  pdfproducer={Overleaf}
+}
+\usepackage{graphicx}
+
+\usepackage{float}
+\usepackage{longtable, booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage[acronym]{glossaries}
+\makeglossaries
+\input{acronimos}
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{referencias.bib}
+
+% ======================================================================
+% AJUSTE NATIVO DEL ESPACIO EN INICIOS DE CAPÍTULO (SIN ERRORES)
+% ======================================================================
+\makeatletter
+% Modificamos la macro original de LaTeX que inserta el espacio en blanco gigante
+\def\@makechapterhead#1{%
+  % El valor original es \vspace*{50\p@}. Lo cambiamos a 0 o negativo para subirlo
+  \vspace*{-20\p@}% <--- ESTE ES EL NÚMERO QUE PUEDES CAMBIAR (ej: -10, -30)
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+  
+% Y hacemos lo mismo para los capítulos sin número (\chapter*) como los Apéndices
+\def\@makeschapterhead#1{%
+  \vspace*{-20\p@}% <--- EL MISMO VALOR QUE EL ANTERIOR PARA QUE QUEDEN IGUALES
+  {\parindent \z@ \raggedright
+    \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries  #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatletter
+% ======================================================================
+
+
+% ======================================================================
+% CONFIGURACIÓN DEL ENCABEZADO SMS (A PRUEBA DE FALLOS)
+% ======================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\fancyhead[C]{
+    \renewcommand{\arraystretch}{1.6} % Da aire vertical a las celdas
+    \begin{tabular}{|m{3.8cm}|m{6.5cm}|m{4.8cm}|}
+        \hline
+        % Al poner el ancho fijo (3.8cm y 6.5cm) en el multirow, LaTeX centra todo automáticamente
+        \multirow{3}{3.8cm}{\centering \includegraphics[width=3.2cm]{Imagenes/LOGO.png}} & 
+        \multirow{3}{6.5cm}{\centering \\[0.2]\textbf{MANUAL DE SEGURIDAD}\\[0.1cm] \textbf{OPERACIONAL SMS}} & 
+        \textbf{Versión: 1.0} \\
+        \cline{3-3}
+        & & \textbf{Código: SMS-SKY-001} \\
+        \cline{3-3}
+        & & \textbf{Fecha de Emisión: 23/06/2026} \\
+        \hline
+    \end{tabular}
+}
+\fancyfoot[R]{\thepage}
+
+% Copia exacta para las páginas donde inicia un capítulo
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[C]{
+        \renewcommand{\arraystretch}{1.6}
+        \begin{tabular}{|m{3.8cm}|m{6.5cm}|m{4.8cm}|}
+            \hline
+            \multirow{3}{3.8cm}{\centering \includegraphics[width=3.2cm]{Imagenes/LOGO.png}} & 
+            \multirow{3}{6.5cm}{\centering \\[0.1]\textbf{MANUAL DE SEGURIDAD}\\[0.1cm] \textbf{OPERACIONAL SMS}} & 
+            Versión: 01 \\
+            \cline{3-3}
+            & & Código: SMS-SKY-001 \\
+            \cline{3-3}
+            & & Fecha de Emisión: 23/06/2026 \\
+            \hline
+        \end{tabular}
+    }
+    \fancyfoot[R]{\thepage}
+}
+% =========================================================================
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    {\Large \textbf{SKYFILMS}}\\[6pt]
+    {\huge \textbf{Manual de Seguridad Operacional}}\\[6pt]
+    {\Large \textbf{SMS}}\\[6pt]
+    {\large Cumplimiento RAC 100}\\[30pt]
+    \includegraphics[width=0.6\textwidth]{Imagenes/LOGO.png}\\[16pt]
+    \begin{tabular}{ll}
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    
+        \textbf{Código}: & SMS-SKY-001\\
+        \textbf{Versión}: & 01\\
+            
+    \end{tabular}
+    \vfill
+\end{titlepage}
+
+
+
+\chapter*{Lista de Páginas Efectivas}
+\addcontentsline{toc}{chapter}{Lista de Páginas Efectivas}
+\input{content/paginas_efectivas}
+
+
+\chapter*{Control Manual Enmiendas y Revisiones}
+\addcontentsline{toc}{chapter}{Control Manual Enmiendas y Revisiones}
+\input{content/Registro de Revisiones}
+
+
+
+\chapter*{Lista de Distribución}
+\addcontentsline{toc}{chapter}{Lista de Distribución}
+\input{content/lista_distribucion}
+
+\chapter*{Definiciones y Acrónimos}
+\addcontentsline{toc}{chapter}{Definiciones y Acrónimos}
+\input{content/Definiciones_y_acronimos}
+
+
+
+\tableofcontents
+\clearpage
+
+
+% Capítulo 1: Información General
+\chapter{Introducción}
+\label{chap:introduccion}
+\input{content/01_introduccion}
+
+
+% Capítulo 2: Politica y Objetivos
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=60pt, headsep=1.5cm}
+\chapter{Política y Objetivos}
+\label{chap:Política y Objetivos}
+\input{content/02_Política y Objetivos}
+
+% Capítulo 3: Gestion de Riesgos de Seguridad Operacional
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=60pt, headsep=1.5cm}
+\chapter{Gestión de Riesgos de Seguridad Operacional}
+\label{chap:Gestión de Riesgos de Seguridad Operacional}
+\input{content/03_Gestión de Riesgos de Seguridad Operacional}
+
+
+% Capítulo 4: Aseguramiento de la Seguridad Operacional
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=60pt, headsep=1.5cm}
+\chapter{Aseguramiento de la Seguridad Operacional}
+\label{chap:Aseguramiento de la Seguridad Operacional}
+\input{content/04_Aseguramiento de la Seguridad Operacional}
+
+
+
+% Capítulo 5: Promoción de la Seguridad Operacional
+\newgeometry{top=4.2cm, bottom=2.5cm, left=2cm, right=2cm, headheight=60pt, headsep=1.5cm}
+\chapter{Promoción de la Seguridad Operacional}
+\label{chap:Promoción de la Seguridad Operacional}
+\input{content/05_Promoción de la Seguridad Operacional}
+
+
+
+% Apendice: Anexos
+\chapter*{Apéndices}          % Sección sin número
+\addcontentsline{toc}{chapter}{Apéndices} % Lo añade al índice
+
+\section*{A. Anexos}
+\addcontentsline{toc}{section}{A. Anexos}
+
+\begin{itemize}
+    \item \textbf{Anexo 1:} Objetivos de Seguridad Operacional KPI's.
+    
+    \item \textbf{Anexo 2:} Contactos de Emergencia.
+    
+    \item \textbf{Anexo 3:} Procedimiento de Control de Documentos y Registros.
+
+    \item \textbf{Anexo 4:} Listado Reportes Obligatorios M.O.R. 
+
+    \item \textbf{Anexo 5:} Guía de Uso Formato de Notificación Peligros de Seguridad Operacional.
+
+    \item \textbf{Anexo 6:} Guía de Uso Evaluación de Riesgos de Vuelo FRAT.
+
+    \item \textbf{Anexo 7:} Registro de Peligros de Seguridad Operacional.
+
+    \item \textbf{Anexo 8:} Matriz de Evaluación de Riesgos (Metodo Reactivo).
+
+    \item \textbf{Anexo 9:} Indicadores de Rendimiento de Seguridad Operacional SPI's.
+
+    \item \textbf{Anexo 10:} Procedimiento de Gestión del Cambio.
+
+    \item \textbf{Anexo 11:} Plan de Mejora Continua.
+
+    \item \textbf{Anexo 12:} Programa de Instrucción SMS.
+\end{itemize}
+
+\section*{B. Documentación de Referencia}
+\addcontentsline{toc}{section}{B. Documentación de Referencia}
+
+\begin{itemize}
+    \item Doc 9859 - Manual de Gestión de Seguridad Operacional
+    \item RAC 219 - Implementación del Sistema SMS
+    \item RAC 100 - Operación de Sistemas De Aeronaves No Tripuladas UAS 
+    \item 100-MAUT-5.0-22-017 CI-Para la Implementación del SMS en explotadores UAS
+    \item 219-MAUT-1.0-22-005 CI Definicion de Indicadores de rendimiento en Materia de Seguridad Operacional
+    \item Circular GIVC-1.0-22-015 Respuesta ante emergencias
+\end{itemize}
+
+\end{document}
+
+
