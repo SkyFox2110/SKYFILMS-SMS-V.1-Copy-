@@ -1,5 +1,5 @@
-\chapter*{Apéndices}
-\addcontentsline{toc}{chapter}{Apéndices}
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
 \label{inicio_anexos}
 Este capítulo reúne los anexos que el Manual cita en sus capítulos 1 a 5. Cada anexo se identifica como Anexo 1 a Anexo 12. Los formatos tienen el mismo código que los del Manual de Operaciones (F-001 a F-017) y del Manual de Control de Mantenimiento (F-018 a F-022).
 
@@ -67,7 +67,7 @@ Centro médico más cercano al sitio de la misión & Lo define el piloto al mand
 Manual SMS & A & E, S & R & C & C \\ \hline
 Manual de Operaciones & A & R & E, S & C & C \\ \hline
 Manual de Control de Mantenimiento & A & R & R & E, S & C \\ \hline
-Reportes de peligros y eventos (F-013 y otros) & C & E, S & C & C & E \\ \hline
+Reportes de peligros y eventos (F-006, F-012, F-013) & C & E, S & C & C & E \\ \hline
 Registro de peligros y matrices de riesgo & A & E, S & R & C & C \\ \hline
 Actas del SRB y del SAG & A (SRB) & E, S & C & C & -- \\ \hline
 Registros de instrucción (F-016, F-017) & C & R & E, S & C & C \\ \hline
@@ -108,13 +108,13 @@ El reporte se hace con el formato de notificación del suceso de la DIACC, con l
     \item Operación sin los permisos, autorizaciones o seguros exigidos, o fuera de las condiciones de las OpSpecs.
 \end{enumerate}
 
-Todo evento de esta lista se anota en el F-013, se investiga (ver el capítulo 3) y lo revisa el SRB. Los eventos que no están en la lista se reportan como voluntarios.
+Todo evento de esta lista se anota en el F-013 (y en el F-006 si no hubo incidente), se investiga (ver el capítulo 3) y lo revisa el SRB. Los eventos que no están en la lista se reportan como voluntarios.
 
 % =====================================================================
 \clearpage
 \section*{Anexo 5 --- Guía de Uso del Formato de Notificación de Peligros}
 \addcontentsline{toc}{section}{Anexo 5 --- Guía del Formato de Notificación de Peligros}
-Se usa el F-013 (Reporte de Evento o Peligro). Lo puede diligenciar cualquier persona, también un tercero o un cliente, en papel, por correo o por mensaje al Gerente SMS.
+Se usa el F-006 (Reporte SMS) para cualquier peligro o situación insegura, y el F-013 (Reporte de Incidente o Accidente) cuando hubo un incidente o accidente. El Gerente SMS pasa cada peligro al F-012 (Reporte de Peligros) para evaluarlo. Lo puede diligenciar cualquier persona, también un tercero o un cliente, en papel, por correo o por mensaje al Gerente SMS.
 
 \textbf{Qué escribir:} fecha y hora; lugar; aeronave; qué pasó o qué peligro vio; quién estaba; qué hizo en el momento; y qué sugiere. El nombre es opcional en reportes voluntarios.
 
@@ -144,36 +144,20 @@ Voluntario con riesgo verde & 5 días hábiles & 10 días hábiles & 30 días h�
 \clearpage
 \section*{Anexo 6 --- Guía de Evaluación de Riesgos de Vuelo (FRAT)}
 \addcontentsline{toc}{section}{Anexo 6 --- Guía FRAT}
-El piloto al mando completa el FRAT antes de cada jornada de vuelo y lo entrega al Jefe de Pilotos. Se marca cada factor que aplique y se suman los puntos.
+La herramienta FRAT de Skyfilms es el formato \textbf{F-011 Evaluación del Riesgo Operacional} del Manual de Operaciones. El piloto remoto lo completa antes de cada operación y de nuevo si cambian las condiciones; es la decisión GO / NO GO, y se entrega al Jefe de Pilotos.
 
-\begin{longtable}{|>{\RaggedRight\arraybackslash}p{4cm}|>{\RaggedRight\arraybackslash}p{9cm}|c|}
-\hline
-\rowcolor[gray]{0.9}\textbf{Grupo} & \textbf{Factor} & \textbf{Puntos} \\ \hline
-\endhead
-Personas & Menos de 7 horas de sueño, cansancio, estrés o malestar & 3 \\ \hline
-Personas & Menos de 3 vuelos en los últimos 30 días con ese equipo & 2 \\ \hline
-Personas & No hay observador o este no está descansado & 3 \\ \hline
-Aeronave & Batería con más de 100 ciclos o con una discrepancia pendiente & 2 \\ \hline
-Aeronave & Mantenimiento o actualización de firmware reciente sin prueba de vuelo & 3 \\ \hline
-Aeronave & Un sistema de fábrica con falla (luces, sensores) & 5 \\ \hline
-Entorno & Viento fuerte, lluvia, niebla o temperatura fuera de los límites del fabricante & 3 \\ \hline
-Entorno & Vuelo nocturno & 2 \\ \hline
-Entorno & Zona urbana, con personas o vehículos cerca & 3 \\ \hline
-Entorno & Aeródromo, helipuerto o tráfico de aeronaves tripuladas cercano & 3 \\ \hline
-Misión & Sitio nuevo o sin reconocimiento previo & 2 \\ \hline
-Misión & Presión del cliente o poco tiempo para preparar el vuelo & 3 \\ \hline
-\end{longtable}
+\textbf{Cómo se califica.} Cada uno de los 12 factores se califica de 1 (favorable) a 5 (crítico): información de la misión; zona de despegue y aterrizaje; personas y propiedad en el área; espacio aéreo y autorizaciones; meteorología; luz y nivel de oscuridad; obstáculos y cables; señal GNSS y enlace C2; estado de la aeronave y baterías; experiencia del piloto; descanso, estado físico y carga de trabajo; y observador y comunicaciones.
 
-\begin{tabularx}{\textwidth}{|l|X|}
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{4.6cm}|X|}
 \hline
-\rowcolor[gray]{0.9}\textbf{Total} & \textbf{Decisión} \\ \hline
-0 a 8 (verde) & El piloto al mando puede volar. \\ \hline
-9 a 16 (amarillo) & Vuela solo con una medida de mitigación anotada y la autorización del Jefe de Pilotos. \\ \hline
-17 o más (rojo) & No se vuela hasta reducir el puntaje; si no se puede, decide el Gerente SMS y se informa al Gerente General. \\ \hline
+\rowcolor[gray]{0.9}\textbf{Resultado} & \textbf{Decisión} \\ \hline
+12 a 36 puntos (verde) & \textbf{GO}: el piloto remoto puede operar. \\ \hline
+37 a 60 puntos (amarillo) & \textbf{GO con medidas de mitigación}: se anotan las medidas y firma también el Jefe de Pilotos. \\ \hline
+Más de 60 puntos, o cualquier factor en 5 (rojo) & \textbf{NO GO}: no se opera hasta reducir el riesgo; si no se puede, decide el Gerente SMS y se informa al Gerente General. \\ \hline
 \end{tabularx}
 
 \medskip
-Un solo factor de 5 puntos (sistema de fábrica con falla) impide el vuelo, sin importar el total. Los FRAT se resumen cada trimestre para el indicador GI-02.
+Una aeronave con un sistema de fábrica inoperativo o con una anomalía abierta no vuela, sin importar el total. El Gerente SMS resume los F-011 cada trimestre para el indicador interno GI-02.
 
 % =====================================================================
 \clearpage
@@ -208,7 +192,7 @@ Se diligencia por cada evento reportado o investigado. Las matrices de probabili
 \begin{tabularx}{\textwidth}{|l|X|}
 \hline
 \rowcolor[gray]{0.9}\textbf{Campo} & \textbf{Qué se escribe} \\ \hline
-Evento y fecha & Código del F-013 y fecha \\ \hline
+Evento y fecha & Código del F-006, F-012 o F-013 y fecha \\ \hline
 Peligro y contexto & Qué es el peligro y en qué condición se dio \\ \hline
 Causas y consecuencias & Causas, factores contribuyentes y qué pudo pasar \\ \hline
 Supuestos o datos que faltan & Se escribe qué se supone y por qué; si falta información, se usa el peor caso creíble \\ \hline
@@ -283,7 +267,7 @@ Estos indicadores sirven a Skyfilms para vigilar el funcionamiento del SMS. No s
 \rowcolor[gray]{0.9}\textbf{N.º} & \textbf{Indicador} & \textbf{Fórmula (por trimestre)} & \textbf{Meta} \\ \hline
 \endhead
 GI-01 & Reportes voluntarios & Reportes voluntarios recibidos por cada 1\,000 ciclos de vuelo & Al menos 20 \\ \hline
-GI-02 & Vuelos con FRAT completo & Vuelos con FRAT completo / vuelos realizados $\times$ 100 & 100\,\% \\ \hline
+GI-02 & Vuelos con F-011 (FRAT) completo & Vuelos con F-011 completo / vuelos realizados $\times$ 100 & 100\,\% \\ \hline
 GI-03 & Personal con instrucción vigente & Personas con instrucción SMS y recurrente vigente / personal total $\times$ 100 & 100\,\% \\ \hline
 GI-04 & Acciones cerradas a tiempo & Acciones cerradas en su plazo / acciones con plazo cumplido $\times$ 100 & 90\,\% o más \\ \hline
 GI-05 & Auditorías ejecutadas & Auditorías hechas / auditorías programadas $\times$ 100 & 100\,\% \\ \hline
