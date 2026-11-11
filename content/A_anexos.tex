@@ -8,20 +8,20 @@ Este capítulo reúne los anexos que el Manual cita en sus capítulos 1 a 5. Cad
 % =====================================================================
 \section*{Anexo 1 --- Objetivos de Seguridad Operacional y su Relación con los SPI}
 \addcontentsline{toc}{section}{Anexo 1 --- Objetivos de Seguridad Operacional y SPI}
-Cada objetivo específico del capítulo 2 se mide con uno o más indicadores (SPI, ver Anexo 9). El Gerente SMS revisa esta relación una vez al año, al revisar los objetivos (ver el capítulo 2), y cada vez que cambie el alcance de la operación.
+Cada objetivo específico del capítulo 2 se mide con indicadores. Los SPI oficiales de la Aerocivil para explotadores UAS (U-xxx) están en el Anexo 9; los indicadores internos de gestión (GI-xx) también están allí y no se reportan a la Aerocivil como SPI. El Gerente SMS revisa esta relación una vez al año y cada vez que cambie el alcance de la operación.
 
-\begin{longtable}{|>{\RaggedRight\arraybackslash}p{4cm}|>{\RaggedRight\arraybackslash}p{5.2cm}|>{\RaggedRight\arraybackslash}p{6.6cm}|}
+\begin{longtable}{|>{\RaggedRight\arraybackslash}p{4cm}|>{\RaggedRight\arraybackslash}p{5.4cm}|>{\RaggedRight\arraybackslash}p{6.2cm}|}
 \hline
-\rowcolor[gray]{0.9}\textbf{Objetivo específico} & \textbf{SPI asociados (Anexo 9)} & \textbf{Por qué se mide así} \\ \hline
+\rowcolor[gray]{0.9}\textbf{Objetivo específico} & \textbf{Indicadores (Anexo 9)} & \textbf{Por qué se mide así} \\ \hline
 \endhead
-Mejora continua & SPI-09 Acciones cerradas a tiempo; SPI-10 Auditorías ejecutadas & Muestra si el SMS corrige lo que encuentra y si se verifica cada año. \\ \hline
-Cultura de seguridad & SPI-01 Reportes voluntarios; SPI-08 Personal con instrucción vigente & Un buen número de reportes y personal capacitado indican confianza y conocimiento del sistema. \\ \hline
-Cumplimiento normativo & SPI-03 Eventos de reporte obligatorio; SPI-04 Accidentes e incidentes graves; SPI-07 Vuelos con FRAT completo & Mide que se cumpla el RAC 100 en cada vuelo y que no ocurran eventos graves. \\ \hline
-Recursos adecuados & SPI-08 Personal con instrucción vigente; SPI-11 Discrepancias técnicas repetidas & Muestra si hay personal formado y equipos en condición para volar. \\ \hline
-Operación segura en VLOS, vuelo nocturno y zona urbana & SPI-02 Errores del personal operativo; SPI-05 Salidas del área autorizada; SPI-06 Pérdidas de enlace C2 & Mide los riesgos propios de la operación certificada de Skyfilms. \\ \hline
+Mejora continua & GI-04 Acciones cerradas a tiempo; GI-05 Auditorías ejecutadas & Muestra si el SMS corrige lo que encuentra y se verifica cada año. \\ \hline
+Cultura de seguridad & GI-01 Reportes voluntarios; GI-03 Personal con instrucción vigente & Reportes y personal capacitado indican confianza y conocimiento del sistema. \\ \hline
+Cumplimiento normativo & GI-02 Vuelos con FRAT completo; todos los SPI U-xxx (reporte anual a la Aerocivil) & Mide que se cumpla el RAC 100 en cada vuelo y que se reporten los eventos. \\ \hline
+Recursos adecuados & GI-03 Personal con instrucción vigente; U-SCF-NP(1) Fallas en baterías & Muestra si hay personal formado y equipos en condición para volar. \\ \hline
+Operación segura en VLOS, vuelo nocturno y zona urbana & U-LOC-I, U-CFIT-1, U-CFIT-2, U-SCF-NP(2), U-GTI, U-MAC-1 & Miden los eventos propios de la operación certificada de Skyfilms. \\ \hline
 \end{longtable}
 
-\textbf{Programa Estatal de Seguridad Operacional (SSP):} los objetivos de Skyfilms apoyan los objetivos del Estado: prevenir accidentes, reportar los eventos exigidos y cumplir el RAC 100 y el RAC 219. Si la Aerocivil define indicadores o metas propios para explotadores UAS, Skyfilms los adopta y actualiza este anexo y el Anexo 9.
+\textbf{Programa Estatal de Seguridad Operacional (SSP - PEGASO):} los objetivos de Skyfilms apoyan los del Estado: prevenir accidentes, reportar los eventos exigidos y cumplir el RAC 100 y el RAC 219. Los SPI de Skyfilms son los concertados por la Aerocivil para explotadores UAS (circular MAUT-1.0-22-005, versión 02 de marzo de 2026).
 
 % =====================================================================
 \clearpage
@@ -163,7 +163,7 @@ Misión & Presión del cliente o poco tiempo para preparar el vuelo & 3 \\ \hlin
 \end{tabularx}
 
 \medskip
-Un solo factor de 5 puntos (sistema de fábrica con falla) impide el vuelo, sin importar el total. Los FRAT se resumen cada trimestre para el SPI-07.
+Un solo factor de 5 puntos (sistema de fábrica con falla) impide el vuelo, sin importar el total. Los FRAT se resumen cada trimestre para el indicador GI-02.
 
 % =====================================================================
 \clearpage
@@ -213,26 +213,71 @@ Verificación de eficacia & Fecha, método y resultado (ver el capítulo 3) \\ \
 \clearpage
 \section*{Anexo 9 --- Indicadores de Rendimiento de Seguridad Operacional (SPI)}
 \addcontentsline{toc}{section}{Anexo 9 --- Indicadores de Rendimiento (SPI)}
-Hay once indicadores. Se calculan cada trimestre, los revisa el SAG, y el SRB los analiza al menos una vez al año. Una desviación del nivel de alerta lleva a una acción correctiva en el Plan de Mejora Continua (Anexo 11).
+Skyfilms usa los once SPI concertados por la Aerocivil para explotadores UAS (circular MAUT-1.0-22-005, versión 02, 20-03-2026). Un SPI mide la \textit{ocurrencia de eventos} de seguridad operacional.
 
-\begin{longtable}{|c|>{\RaggedRight\arraybackslash}p{3.1cm}|>{\RaggedRight\arraybackslash}p{4.9cm}|>{\RaggedRight\arraybackslash}p{2.2cm}|>{\RaggedRight\arraybackslash}p{2.4cm}|}
+\subsection*{A. Indicadores SPI oficiales (reporte a la Aerocivil)}
+\begin{longtable}{|c|>{\RaggedRight\arraybackslash}p{4.4cm}|>{\RaggedRight\arraybackslash}p{2.4cm}|>{\RaggedRight\arraybackslash}p{5.6cm}|}
 \hline
-\rowcolor[gray]{0.9}\textbf{N.º} & \textbf{Indicador} & \textbf{Fórmula (por trimestre)} & \textbf{Meta} & \textbf{Alerta} \\ \hline
+\rowcolor[gray]{0.9}\textbf{N.º} & \textbf{Indicador} & \textbf{ID de la hoja Excel} & \textbf{Qué se cuenta} \\ \hline
 \endhead
-SPI-01 & Reportes voluntarios & Reportes voluntarios recibidos / vuelos realizados x 100 & Al menos 5 por cada 100 vuelos & Menos de 2 \\ \hline
-SPI-02 & Errores del personal operativo & Errores reportados de pilotos y observadores / vuelos realizados x 100 & 5 o menos por cada 100 vuelos & Más de 10 \\ \hline
-SPI-03 & Eventos de reporte obligatorio & Eventos del Anexo 4 / vuelos realizados x 100 & 0 & 1 o más \\ \hline
-SPI-04 & Accidentes e incidentes graves & Número de accidentes e incidentes graves & 0 & 1 o más \\ \hline
-SPI-05 & Salidas del área o altura autorizadas & Vuelos con salida del área o de la altura autorizada / vuelos realizados x 100 & 0 & 1 o más \\ \hline
-SPI-06 & Pérdidas de enlace C2 & Pérdidas de enlace / vuelos realizados x 100 & 1 o menos por cada 100 vuelos & Más de 3 \\ \hline
-SPI-07 & Vuelos con FRAT completo & Vuelos con FRAT completo / vuelos realizados x 100 & 100\,\% & Menos de 95\,\% \\ \hline
-SPI-08 & Personal con instrucción vigente & Personas con instrucción SMS y recurrente vigente / personal total x 100 & 100\,\% & Menos de 90\,\% \\ \hline
-SPI-09 & Acciones cerradas a tiempo & Acciones cerradas en su plazo / acciones con plazo vencido o cerrado x 100 & 90\,\% o más & Menos de 70\,\% \\ \hline
-SPI-10 & Auditorías ejecutadas & Auditorías hechas / auditorías programadas x 100 & 100\,\% & Menos de 100\,\% \\ \hline
-SPI-11 & Discrepancias técnicas repetidas & Discrepancias del mismo componente en la misma aeronave en el trimestre & 0 & 2 o más \\ \hline
+1 & Aterrizaje en ubicación no planeada o de emergencia & U-ARC & La aeronave no llega al punto de aterrizaje autorizado \\ \hline
+2 & Cuasi colisión con aeronave tripulada & U-MAC-1 & Pérdida de separación con una aeronave tripulada \\ \hline
+3 & Cuasi colisión con fauna & U-WILD & Eventos con fauna que comprometieron la seguridad \\ \hline
+4 & Cuasi colisión con obstáculo o infraestructura & U-CFIT-1 & Cualquier acercamiento no controlado a elementos fijos de terceros \\ \hline
+5 & Cuasi colisión con otro UA & U-MAC-2 & Dos UA casi se impactan con riesgo de daño significativo \\ \hline
+6 & Fallas en baterías & U-SCF-NP(1) & Descargas abruptas, voltajes anómalos o degradación \\ \hline
+7 & Lesiones o golpes a terceros & U-GTI & Daños leves a personas o bienes \\ \hline
+8 & Pérdida de separación entre dos aeronaves & U-MAC-3 & Pérdida de separación (obligatorio medirlo para quien vuela) \\ \hline
+9 & Pérdida de control & U-LOC-I & El piloto o la UA pierde el control total con riesgo severo \\ \hline
+10 & Pérdida de control con colisión contra el terreno & U-CFIT-2 & La UA pierde el control y termina impactando el terreno \\ \hline
+11 & Pérdida del enlace C2 & U-SCF-NP(2) & Deterioro del enlace antes de la pérdida total \\ \hline
 \end{longtable}
 
-\textbf{Periodo y denominador.} El periodo es un trimestre calendario. Si en un trimestre no hubo vuelos, los indicadores por 100 vuelos no se calculan y se anota ``sin operación''. Las metas de este anexo son las iniciales de Skyfilms y se ajustan con los datos de los primeros doce meses y con lo que defina la Aerocivil.
+\textbf{Cómo se calculan (según la circular).}
+\begin{itemize}
+    \item \textbf{Denominador:} ciclos de vuelo (un ciclo es un despegue hasta su aterrizaje). Es el mismo número, cada mes, para todos los indicadores. Se usan valores con decimales.
+    \item \textbf{Tasa:} eventos del mes / ciclos de vuelo del mes $\times$ 1\,000.
+    \item \textbf{Fuente de los eventos:} los reportes MOR y los de este SMS (Anexo 4 y F-013). Se miden todos los indicadores, aunque estén en cero.
+    \item \textbf{Registro mensual:} el Gerente SMS anota cada mes los ciclos de vuelo y los eventos de cada indicador, a partir del libro de vuelo de cada aeronave.
+\end{itemize}
+
+\textbf{Metas y niveles de alerta.} Skyfilms es un explotador nuevo y no tiene historial. Mientras no tenga un año de datos:
+\begin{itemize}
+    \item Como no hay eventos previos, la circular no exige meta ni plan de acción para un indicador que nunca se había medido o tiene cero eventos. La meta de Skyfilms es \textbf{cero eventos}.
+    \item Cualquier evento de un indicador se analiza de inmediato: causa raíz, factor sobre el que Skyfilms puede actuar y plan de acción.
+\end{itemize}
+Con un año de datos, los niveles de alerta se calculan con el promedio y la desviación estándar (DE) del año anterior. Hay alerta cuando: un punto está por encima del promedio + 3 DE; dos puntos seguidos están por encima del promedio + 2 DE; o tres puntos seguidos están por encima del promedio + 1 DE. Con una alerta, se busca la causa raíz y se hace un plan de acción con plazo en días calendario.
+
+\textbf{Planes de acción.} Deben ser cambios concretos y medibles en tecnología (T), regulación interna (R) o entrenamiento (E). No valen planes de solo verificar, auditar o supervisar, ni transferir la solución a otra organización. El plan queda escrito en el manual que corresponda (MO, MCM o este SMS), lo aprueba el Gerente General y lo vigila el Gerente SMS.
+
+\textbf{Ficha técnica de cada indicador.}
+\begin{tabularx}{\textwidth}{|l|X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Campo} & \textbf{Qué se escribe} \\ \hline
+Nombre e ID & Como aparece en la lista oficial \\ \hline
+Definición & Qué evento cuenta \\ \hline
+Fórmula & Eventos / ciclos de vuelo $\times$ 1\,000 \\ \hline
+Fuente y responsable & Reportes y libros de vuelo; Gerente SMS \\ \hline
+Frecuencia & Datos mensuales; análisis trimestral en el SAG; revisión anual en el SRB \\ \hline
+Meta y niveles de alerta & Meta 0; alertas según el párrafo anterior \\ \hline
+Causa raíz, desencadenante y defensa (T, R o E) & Se llena al ocurrir un evento \\ \hline
+Plan de acción, plazo y aprobación & Se llena al ocurrir un evento; aprueba el Gerente General \\ \hline
+\end{tabularx}
+
+\textbf{Entrega a la Aerocivil.} Cada año, antes del 30 de marzo, el Gerente SMS envía el archivo Excel oficial (formato ``Indicadores de rendimiento de Seguridad Operacional (SPI)'', MAUT-1.0-12-002) con el nombre \texttt{UAS-NIT-SPI-MAR-AAAA} (NIT de Skyfilms sin dígito de verificación). Antes de enviarlo, el Gerente General aprueba cada indicador con sus planes de acción.
+
+\subsection*{B. Indicadores internos de gestión del SMS (no son SPI)}
+Estos indicadores sirven a Skyfilms para vigilar el funcionamiento del SMS. No se envían a la Aerocivil como SPI.
+\begin{longtable}{|c|>{\RaggedRight\arraybackslash}p{3.6cm}|>{\RaggedRight\arraybackslash}p{6cm}|>{\RaggedRight\arraybackslash}p{2.8cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{N.º} & \textbf{Indicador} & \textbf{Fórmula (por trimestre)} & \textbf{Meta} \\ \hline
+\endhead
+GI-01 & Reportes voluntarios & Reportes voluntarios recibidos por cada 1\,000 ciclos de vuelo & Al menos 20 \\ \hline
+GI-02 & Vuelos con FRAT completo & Vuelos con FRAT completo / vuelos realizados $\times$ 100 & 100\,\% \\ \hline
+GI-03 & Personal con instrucción vigente & Personas con instrucción SMS y recurrente vigente / personal total $\times$ 100 & 100\,\% \\ \hline
+GI-04 & Acciones cerradas a tiempo & Acciones cerradas en su plazo / acciones con plazo cumplido $\times$ 100 & 90\,\% o más \\ \hline
+GI-05 & Auditorías ejecutadas & Auditorías hechas / auditorías programadas $\times$ 100 & 100\,\% \\ \hline
+\end{longtable}
 
 % =====================================================================
 \clearpage
@@ -293,7 +338,7 @@ Personal clave del SMS & Gerente SMS y Jefe de Pilotos & Investigación de event
 
 \textbf{Si el resultado no alcanza.} La persona repite el tema con apoyo del instructor en un plazo de 15 días y no cumple funciones clave hasta aprobar.
 
-\textbf{Eficacia del programa.} El Gerente SMS compara cada año los resultados de las evaluaciones, los SPI-02 y SPI-08 y los reportes, y ajusta los contenidos.
+\textbf{Eficacia del programa.} El Gerente SMS compara cada año los resultados de las evaluaciones, el indicador GI-03 y los reportes, y ajusta los contenidos.
 
 % =====================================================================
 \clearpage
@@ -304,7 +349,7 @@ Personal clave del SMS & Gerente SMS y Jefe de Pilotos & Investigación de event
     \item RAC 219 --- Gestión de la Seguridad Operacional.
     \item RAC 100 --- Operación de Sistemas de Aeronaves No Tripuladas (UAS).
     \item 100-MAUT-5.0-22-017 CI --- Implementación del SMS en explotadores UAS.
-    \item 219-MAUT-1.0-22-005 CI --- Definición de indicadores de rendimiento en materia de seguridad operacional.
+    \item MAUT-1.0-22-005 CI (versión 02, 20-03-2026) --- Definición de indicadores de desempeño en materia de seguridad operacional (SPI).
     \item Circular GIVC-1.0-22-015 --- Respuesta ante emergencias.
 \end{itemize}
 \label{fin_anexos}
