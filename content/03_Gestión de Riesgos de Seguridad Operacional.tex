@@ -100,11 +100,21 @@ Para estandarizar la toma de decisiones, todo peligro identificado se evalúa ut
 
 El proceso inicia con la utilización de la matriz de evaluación del riesgo, que asigna un código alfanumérico al riesgo inicial.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=.85\textwidth]{Imagenes/Matriz Evaluacion de Riesgos.PNG}
-\caption{Matriz Evaluación de Riesgos}
-\end{figure}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{3.4cm}|*{5}{>{\centering\arraybackslash}X|}}
+\hline
+\rowcolor[gray]{0.9}\textbf{Probabilidad} & \textbf{Catastrófico (A)} & \textbf{Peligroso (B)} & \textbf{Mayor (C)} & \textbf{Menor (D)} & \textbf{Insignificante (E)} \\ \hline
+Frecuente (5) & \cellcolor[HTML]{FF4B4B}\textbf{5A} & \cellcolor[HTML]{FF4B4B}\textbf{5B} & \cellcolor[HTML]{FF4B4B}\textbf{5C} & \cellcolor[HTML]{FFE04D}\textbf{5D} & \cellcolor[HTML]{FFE04D}\textbf{5E} \\ \hline
+Ocasional (4) & \cellcolor[HTML]{FF4B4B}\textbf{4A} & \cellcolor[HTML]{FF4B4B}\textbf{4B} & \cellcolor[HTML]{FFE04D}\textbf{4C} & \cellcolor[HTML]{FFE04D}\textbf{4D} & \cellcolor[HTML]{FFE04D}\textbf{4E} \\ \hline
+Remoto (3) & \cellcolor[HTML]{FF4B4B}\textbf{3A} & \cellcolor[HTML]{FFE04D}\textbf{3B} & \cellcolor[HTML]{FFE04D}\textbf{3C} & \cellcolor[HTML]{FFE04D}\textbf{3D} & \cellcolor[HTML]{3DBE6B}\textbf{3E} \\ \hline
+Improbable (2) & \cellcolor[HTML]{FFE04D}\textbf{2A} & \cellcolor[HTML]{FFE04D}\textbf{2B} & \cellcolor[HTML]{FFE04D}\textbf{2C} & \cellcolor[HTML]{3DBE6B}\textbf{2D} & \cellcolor[HTML]{3DBE6B}\textbf{2E} \\ \hline
+Extremadamente improbable (1) & \cellcolor[HTML]{3DBE6B}\textbf{1A} & \cellcolor[HTML]{3DBE6B}\textbf{1B} & \cellcolor[HTML]{3DBE6B}\textbf{1C} & \cellcolor[HTML]{3DBE6B}\textbf{1D} & \cellcolor[HTML]{3DBE6B}\textbf{1E} \\ \hline
+\end{tabularx}
+\caption{Matriz de evaluación de riesgos: probabilidad (filas) por gravedad (columnas).}
+\end{table}
+
 
 Con el índice de riesgo obtenido, se utiliza la matriz de tolerabilidad para clasificar el riesgo en una de tres regiones:
 
@@ -114,33 +124,73 @@ Con el índice de riesgo obtenido, se utiliza la matriz de tolerabilidad para cl
     \item \textbf{Región Aceptable (Verde):} El riesgo se considera aceptable y puede no requerir acciones de mitigación adicionales, aunque se mantiene bajo observación.
 \end{itemize}
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=.85\textwidth]{Imagenes/Matriz de Tolerabilidad del Riesgo.PNG}
-\caption{Matriz de Tolerabilidad del Riesgo}
-\end{figure}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}p{2.6cm}|>{\centering\arraybackslash}p{3.4cm}|>{\RaggedRight\arraybackslash}X|>{\RaggedRight\arraybackslash}p{3.2cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Región} & \textbf{Índices de riesgo} & \textbf{Criterio} & \textbf{Quién decide y plazo} \\ \hline
+\cellcolor[HTML]{FF4B4B}\textbf{No tolerable} & 5A, 5B, 5C, 4A, 4B, 3A & Inaceptable en las condiciones actuales; la operación se detiene. & Gerente General; respuesta inmediata \\ \hline
+\cellcolor[HTML]{FFE04D}\textbf{Tolerable} & 5D, 5E, 4C, 4D, 4E, 3B, 3C, 3D, 2A, 2B, 2C & Aceptable si se aplican controles. Requiere decisión de la dirección. & Gerente SMS (ver tabla de niveles de autoridad del capítulo 2) \\ \hline
+\cellcolor[HTML]{3DBE6B}\textbf{Aceptable} & 3E, 2D, 2E, 1A, 1B, 1C, 1D, 1E & Aceptable; se mantiene bajo vigilancia. & Gerente SMS; sin plazo \\ \hline
+\end{tabularx}
+\caption{Matriz de tolerabilidad del riesgo.}
+\end{table}
+
 
 La determinación de la \textbf{probabilidad y gravedad} se basa en las definiciones estandarizadas por SKYFILMS, las cuales han sido adaptadas de la guía de la OACI.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=.85\textwidth]{Imagenes/Matriz de Probabilidad.PNG}
-\caption{Matriz de Probabilidad}
-\end{figure}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{4.4cm}|>{\centering\arraybackslash}X|>{\centering\arraybackslash}p{2cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Probabilidad de ocurrencia} & \textbf{Significado} & \textbf{Valor} \\ \hline
+Frecuente & 70 eventos por cada 100 operaciones & \textbf{5} \\ \hline
+Ocasional & 50 eventos por cada 100 operaciones & \textbf{4} \\ \hline
+Remoto & 25 eventos por cada 100 operaciones & \textbf{3} \\ \hline
+Improbable & 10 eventos por cada 100 operaciones & \textbf{2} \\ \hline
+Extremadamente improbable & 1 evento por cada 100 operaciones & \textbf{1} \\ \hline
+\end{tabularx}
+\caption{Probabilidad de ocurrencia.}
+\end{table}
 
-\begin{figure}[H]
+
+\begin{table}[H]
 \centering
-\includegraphics[width=.85\textwidth]{Imagenes/Matriz de Severidad.PNG}
-\caption{Matriz de Severidad}
-\end{figure}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabularx}{\textwidth}{|>{\RaggedRight\arraybackslash}p{3cm}|>{\RaggedRight\arraybackslash}X|>{\centering\arraybackslash}p{1.6cm}|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Gravedad del suceso} & \textbf{Significado} & \textbf{Valor} \\ \hline
+Catastrófico & Destrucción del equipo; muertes múltiples. & \textbf{A} \\ \hline
+Peligroso & Reducción importante de los márgenes de seguridad, daño físico o una carga de trabajo tal que el personal no puede desempeñar sus tareas de forma precisa y completa; lesiones graves; daños mayores al equipo. & \textbf{B} \\ \hline
+Mayor & Reducción significativa de los márgenes de seguridad o de la habilidad del operador para responder a condiciones adversas por aumento de la carga de trabajo o por condiciones que impiden su eficiencia; incidente grave; lesiones a personas. & \textbf{C} \\ \hline
+Menor & Interferencia; limitaciones operacionales; uso de procedimientos de emergencia; incidentes menores. & \textbf{D} \\ \hline
+Insignificante & Consecuencias leves. & \textbf{E} \\ \hline
+\end{tabularx}
+\caption{Gravedad de las consecuencias.}
+\end{table}
+
 
 Este flujo de análisis, evaluación y decisión asegura un tratamiento consistente y documentado para cada peligro identificado.
 
-\begin{figure}[H]
+\begin{table}[H]
 \centering
-\includegraphics[width=.85\textwidth]{Imagenes/Proceso de Gestion del Riesgo.PNG}
-\caption{Proceso de Gestión de los Riesgos de Seguridad Operacional}
-\end{figure}
+\renewcommand{\arraystretch}{1.35}
+\begin{tabularx}{\textwidth}{|c|>{\RaggedRight\arraybackslash}p{4.2cm}|>{\RaggedRight\arraybackslash}X|}
+\hline
+\rowcolor[gray]{0.9}\textbf{Paso} & \textbf{Actividad} & \textbf{Qué ocurre después} \\ \hline
+1 & Identificación del peligro & Pasa a evaluar la probabilidad. \\ \hline
+2 & Evaluación de la probabilidad (1 a 5) & Pasa a evaluar la gravedad. \\ \hline
+3 & Evaluación de la gravedad (A a E) & Con el índice se ubica el riesgo en una región de la matriz de tolerabilidad. \\ \hline
+4 & \cellcolor[HTML]{FF4B4B}\textbf{Intolerable} & Acciones correctivas (mitigación TRE); se evalúa de nuevo hasta que el riesgo sea tolerable. \\ \hline
+5 & \cellcolor[HTML]{FFE04D}\textbf{Tolerable} & Acciones preventivas o plan de mejora (mitigación TRE); se evalúa de nuevo hasta que el riesgo sea aceptable. \\ \hline
+6 & \cellcolor[HTML]{3DBE6B}\textbf{Aceptable} & Se acepta y se vigila. \\ \hline
+7 & Fin & Se registra el resultado en el registro de peligros (Anexo 7). \\ \hline
+\end{tabularx}
+\caption{Proceso de gestión de los riesgos de seguridad operacional.}
+\end{table}
+
 
 \textbf{b) Mitigación y Control de los Riesgos de Seguridad Operacional:}\\
 
